@@ -7,13 +7,13 @@ class Board
   end
 
   def place_move(column_number)
-    board[available_moves[human_to_array_index(column_number)]][human_to_array_index(column_number)] = 'x'
+    board[available_moves[human_to_array_index(column_number)]][human_to_array_index(column_number)] = 'o'
     available_moves[human_to_array_index(column_number)] = available_moves[human_to_array_index(column_number)] - 1
     self
   end
 
   def display_board
-    board.each { |row| puts row }
+    board.each { |row| puts row.to_s }
   end
 
   private
