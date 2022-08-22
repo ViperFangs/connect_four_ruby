@@ -7,7 +7,7 @@ class Board
   end
 
   def place_move(column_number)
-    board[available_moves[human_to_array_index(column_number)]][human_to_array_index(column_number)] = 'o'
+    board[available_moves[human_to_array_index(column_number)]][human_to_array_index(column_number)] = taken_piece_symbol
     available_moves[human_to_array_index(column_number)] = available_moves[human_to_array_index(column_number)] - 1
     self
   end
@@ -33,5 +33,9 @@ class Board
 
   def available_piece_symbol
     '_'
+  end
+
+  def taken_piece_symbol
+    'o'
   end
 end
