@@ -14,6 +14,7 @@ class Board
 
   def display_board
     board.each { |row| puts row.to_s }
+    self
   end
 
   private
