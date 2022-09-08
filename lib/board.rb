@@ -21,7 +21,7 @@ class Board
 
   def prepare_board(rows, columns)
     @board = create_board(rows, columns)
-    @available_moves = Array.new(columns) { rows - 1}
+    @available_moves = Array.new(columns) { rows - 1 }
   end
 
   def human_to_array_index(number)
